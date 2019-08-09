@@ -26,7 +26,17 @@ const renderTerms = (categoryNodes = [], tagNodes = []) => (
   </>
 );
 
+const syntaxHighlighter = content => {
+
+  var regex = /\[javascript\]|\[php\]/g;
+
+  var regex2 = /\[\/javascript\]|\[\/php\]/gi;
+
+  return {__html: content.replace(regex, '<pre class="bg-gray-900 text-gray-100 text-wrap overflow-scroll rounded p-4 font-mono">').replace(regex2, '</pre>') }
+}
+
 const Post = ({ pageContext: post }) => {
+
   return (
     <Layout>
       <SEO title={`${post.title}`} />
@@ -44,7 +54,7 @@ const Post = ({ pageContext: post }) => {
 
         <div
           className="entry-content max-w-2xl m-auto"
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={syntaxHighlighter(post.content)}
         />
         <footer className="entry-footer max-w-2xl m-auto">
           <BlogOptin />

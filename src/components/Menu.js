@@ -106,7 +106,7 @@ const Menu = ({ location }) => {
               <MenuToggle onClick={openNav} />
 
               {navOpen && <BodyClass add="nav-open" />}
-              <div className="menu-primary-container">
+              <div className="menu-primary-container hidden sm:block">
 
               {/* <input type="text" className="menu-search rounded border p-1 float-left" ref={searchBar} onChange={handleSearch} /> */}
               
