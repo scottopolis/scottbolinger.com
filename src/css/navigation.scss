@@ -257,7 +257,7 @@
       z-index: 2;
 
       @supports (-webkit-backdrop-filter: none) {
-        background-color: rgba(255, 255, 255, 0);
+        background-color: rgba(255, 255, 255, .95);
       }
 
     }
@@ -294,14 +294,15 @@
   }
 
   ul li.has-subMenu ul {
-      position: static;
-      margin-top: .7rem;
-      transform: translate3d(0,0,0);
-      transition: none;
-      border: none;
-      border-radius: 0;
-      width: auto;
-    }
+    position: static;
+    margin-top: .7rem;
+    transform: translate3d(0,0,0);
+    transition: none;
+    border: none;
+    border-radius: 0;
+    width: auto;
+    background: transparent;
+  }
 
   @media only screen and (max-width: 599px) {
     overflow: hidden;
