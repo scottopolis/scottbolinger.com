@@ -30,6 +30,7 @@ module.exports = {
       `gatsby-plugin-sharp`,
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sass`,
+      'gatsby-plugin-sitemap',
       {
         resolve: 'gatsby-plugin-web-font-loader',
         options: {
@@ -43,6 +44,13 @@ module.exports = {
         options: {
             endpoint: 'https://gmail.us20.list-manage.com/subscribe/post?u=39bce0bcbbab9f0d9a6f57112&amp;id=b7df6d6743',
         }
-      }
+      },
+      {
+        resolve: `gatsby-plugin-google-analytics`,
+        options: {
+          trackingId: `UA-6044974-7`,
+          head: true,
+        },
+      },
     ],
 }

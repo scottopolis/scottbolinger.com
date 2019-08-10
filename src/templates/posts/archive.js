@@ -3,6 +3,7 @@ import Layout from "../../components/Layout"
 import PostEntry from "../../components/PostEntry"
 import Pagination from "../../components/Pagination"
 import HeaderArchive from '../../components/HeaderArchive';
+import SEO from '../../components/SEO'
 
 const BlogArchive = props => {
   const {
@@ -12,6 +13,12 @@ const BlogArchive = props => {
   return (
     
     <Layout>
+
+      <SEO
+        title="Latest Posts"
+        description="The latest articles."
+        keywords={[`scott bolinger`]}
+      />
       
       <div className="max-w-2xl m-auto xl:max-w-5xl blog-page">
 
