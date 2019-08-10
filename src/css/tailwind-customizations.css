@@ -71,6 +71,22 @@ figcaption {
     @apply text-2xl text-gray-600 mb-4;
 }
 
+.comment-body p {
+    @apply text-sm;
+}
+
+.site-content blockquote {
+    @apply font-serif font-light pl-4 italic text-gray-600;
+}
+
+pre br {
+    @apply hidden;
+}
+
+pre p {
+    @apply mb-0 text-gray-100;
+}
+
 .menu-search {
     position: relative;
     z-index: -1;

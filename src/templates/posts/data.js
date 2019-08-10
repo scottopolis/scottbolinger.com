@@ -31,6 +31,20 @@ const PostTemplateFragment = `
       }
       slug
     }
+    comments {
+      nodes {
+        content(format: RENDERED)
+        date
+        id
+        author {
+          ... on WPGraphQL_CommentAuthor {
+            id
+            name
+            email
+          }
+        }
+      }
+    }
   }
 `;
 
