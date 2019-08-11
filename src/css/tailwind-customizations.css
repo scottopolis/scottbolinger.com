@@ -103,6 +103,16 @@ pre p {
     width: 200px;
 }
 
+img.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+img.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
 @media (min-width: 1280px) {
 
     .archive-page .entry-meta, .blog-page .entry-meta {
