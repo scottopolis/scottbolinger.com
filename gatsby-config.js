@@ -25,7 +25,7 @@ module.exports = {
           // This is field under which it's accessible
           fieldName: `wpgraphql`,
           // Url to query from
-          url: `https://scottbolinger.com/graphql`,
+          url: `http://designbyscott.wpengine.com/graphql`,
         },
       },
       `gatsby-plugin-sharp`,
