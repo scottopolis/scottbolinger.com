@@ -2,8 +2,8 @@ import React from "react"
 import Layout from "../../components/Layout"
 import PostEntry from "../../components/PostEntry"
 import Pagination from "../../components/Pagination"
-import HeaderArchive from '../../components/HeaderArchive';
-import SEO from '../../components/SEO'
+import HeaderArchive from "../../components/HeaderArchive"
+import SEO from "../../components/SEO"
 
 const BlogArchive = props => {
   const {
@@ -11,29 +11,27 @@ const BlogArchive = props => {
   } = props
 
   return (
-    
     <Layout>
-
       <SEO
         title="Latest Posts"
         description="The latest articles."
         keywords={[`scott bolinger`]}
       />
-      
+
       <div className="max-w-2xl m-auto xl:max-w-5xl blog-page">
+        <HeaderArchive name="Blog" />
 
-      <HeaderArchive name="Blog" />
-
-        {nodes && nodes.map(post => <PostEntry classes="mb-12" key={post.postId} post={post} />)}
+        {nodes &&
+          nodes.map(post => (
+            <PostEntry classes="mb-12" key={post.postId} post={post} />
+          ))}
         <Pagination
           pageNumber={pageNumber}
           hasNextPage={hasNextPage}
           allPosts={allPosts}
           itemsPerPage={itemsPerPage}
         />
-
       </div>
-      
     </Layout>
   )
 }
