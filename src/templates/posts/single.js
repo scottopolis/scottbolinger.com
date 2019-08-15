@@ -8,7 +8,8 @@ import PostEntryMedia from '../../components/PostEntryMedia';
 import EngagementBar from '../../components/EngagementBar';
 import SEO from '../../components/SEO';
 import BlogOptin from "../../components/BlogOptin";
-import PostComments from '../../components/PostComments'
+import CommentList from '../../components/CommentList';
+import CommentForm from '../../components/CommentForm';
 
 const renderTermNodes = (nodes, termType) => (
   <span className="taxonomy-links text-xs">
@@ -27,17 +28,7 @@ const renderTerms = (categoryNodes = [], tagNodes = []) => (
   </>
 );
 
-const syntaxHighlighter = content => {
-
-  var regex = /\[javascript\]|\[php\]|\[html\]|\[css\]/g;
-
-  var regex2 = /\[\/javascript\]|\[\/php\]|\[\/html\]|\[\/css\]/gi;
-
-  return {__html: content.replace(regex, '<pre class="bg-gray-900 text-gray-100 text-wrap overflow-scroll rounded p-4 font-mono">').replace(regex2, '</pre>') }
-}
-
 const Post = ({ pageContext: post }) => {
-
   return (
     <Layout>
       <SEO title={`${post.title}`} />
@@ -55,7 +46,7 @@ const Post = ({ pageContext: post }) => {
 
         <div
           className="entry-content max-w-2xl m-auto"
-          dangerouslySetInnerHTML={syntaxHighlighter(post.content)}
+          dangerouslySetInnerHTML={{ __html: post.content }}
         />
         <footer className="entry-footer max-w-2xl m-auto">
           <BlogOptin />
@@ -67,7 +58,9 @@ const Post = ({ pageContext: post }) => {
 
           <EngagementBar post={post} />
 
-          <PostComments post={post} />
+          <CommentList postId={post.postId} />
+
+          <CommentForm postID={post.postId} />
         </footer>
 
       </div>
