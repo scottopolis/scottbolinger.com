@@ -37,6 +37,7 @@
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-graphql": "^2.0.14",
     "gatsby-transformer-sharp": "^2.2.5",
+    "graphql": "^14.4.2",
     "graphql-tag": "^2.10.1",
     "isomorphic-fetch": "^2.2.1",
     "node-sass": "^4.11.0",
