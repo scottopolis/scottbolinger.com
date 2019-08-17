@@ -2,7 +2,7 @@ import React from 'react';
 import PostEntryTitle from './PostEntryTitle';
 import PostEntryMeta from './PostEntryMeta';
 import PostEntryMedia from './PostEntryMedia';
-import config from '../../config'
+import config from '../../config';
 
 const PostEntry = ({ post, classes = '' }) => {
 

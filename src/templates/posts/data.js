@@ -7,8 +7,23 @@ const PostTemplateFragment = `
     link
     featuredImage {
       sourceUrl
-      title
-      srcSet
+      imageFile {
+        childImageSharp {
+          fluid(maxWidth: 1024) {
+            base64
+            aspectRatio
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
+            sizes
+            originalImg
+            originalName
+            presentationWidth
+            presentationHeight
+          }
+        }
+      }
     }
     categories {
       nodes {
@@ -31,22 +46,8 @@ const PostTemplateFragment = `
       }
       slug
     }
-    comments {
-      nodes {
-        content(format: RENDERED)
-        date
-        id
-        author {
-          ... on WPGraphQL_CommentAuthor {
-            id
-            name
-            email
-          }
-        }
-      }
-    }
   }
-`;
+`
 
 const BlogPreviewFragment = `
   fragment BlogPreviewFragment on WPGraphQL_Post {
@@ -60,8 +61,23 @@ const BlogPreviewFragment = `
     content
     featuredImage {
       sourceUrl
-      title
-      srcSet
+      imageFile {
+        childImageSharp {
+          fluid(maxWidth: 1024) {
+            base64
+            aspectRatio
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
+            sizes
+            originalImg
+            originalName
+            presentationWidth
+            presentationHeight
+          }
+        }
+      }
     }
     author {
       name
@@ -71,7 +87,7 @@ const BlogPreviewFragment = `
       slug
     }
   }
-`;
+`
 
-module.exports.PostTemplateFragment = PostTemplateFragment;
-module.exports.BlogPreviewFragment = BlogPreviewFragment;
+module.exports.PostTemplateFragment = PostTemplateFragment
+module.exports.BlogPreviewFragment = BlogPreviewFragment

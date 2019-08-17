@@ -55,6 +55,16 @@ a {
     @apply text-center;
 }
 
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
 .aligncenter img, img.aligncenter {
     @apply block m-auto text-center w-full mb-4;
 }
@@ -71,20 +81,8 @@ figcaption {
     @apply text-2xl text-gray-600 mb-4;
 }
 
-.comment-body p {
-    @apply text-sm;
-}
-
-.site-content blockquote {
-    @apply font-serif font-light pl-4 italic text-gray-600;
-}
-
-pre br {
-    @apply hidden;
-}
-
-pre p {
-    @apply mb-0 text-gray-100;
+.single-post .entry-media {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 30px 60px -10px, rgba(0, 0, 0, 0.22) 0px 18px 36px -18px;
 }
 
 .menu-search {
@@ -103,15 +101,26 @@ pre p {
     width: 200px;
 }
 
-img.alignright {
-    float: right;
-    margin-left: 15px;
+.comment-content p {
+    @apply text-sm;
 }
 
-img.alignleft {
-    float: left;
-    margin-right: 15px;
+.comment-body p {
+    @apply text-sm;
 }
+
+.site-content blockquote {
+    @apply font-serif font-light pl-4 italic text-gray-600;
+}
+
+pre br {
+    @apply hidden;
+}
+
+pre p {
+    @apply mb-0 text-gray-100;
+}
+
 
 @media (min-width: 1280px) {
 

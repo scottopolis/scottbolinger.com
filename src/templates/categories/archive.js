@@ -15,7 +15,6 @@ const SingleCategory = props => {
         title={`Category - ${name}`}
         description={`A collection of posts from the ${name} category.`}
       />
-      
       <div className="archive-page max-w-2xl xl:max-w-5xl m-auto">
       <HeaderArchive name={name} />
       
