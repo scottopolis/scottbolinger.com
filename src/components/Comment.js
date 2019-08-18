@@ -10,12 +10,13 @@ class Comment extends Component {
 			authorName: props.authorName,
 			authorUrl: props.authorUrl,
 			commentContent: props.children,
+			classes: props.classes
 		};
 	}
 
 	render() {
 		return (
-			<li key={this.state.commentId} id={'comment-' + this.state.commentId} className="comment bg-gray-100 rounded border p-4 mb-6">
+			<li key={this.state.commentId} id={'comment-' + this.state.commentId} className={'comment bg-gray-100 rounded border p-4 mb-6 ' + this.state.classes }>
 				<article id="div-comment-{this.state.commentId}" className="comment-body">
 					<footer className="comment-meta">
 						<div className="comment-author vcard">

@@ -9,6 +9,11 @@ const commentQuery = gql`
     comments(where: { contentId: $postId }) {
       nodes {
         ...CommentFields
+        children {
+          nodes {
+            ...CommentFields
+          }
+        }
       }
     }
   }
@@ -40,15 +45,33 @@ const CommentList = ({ postId, comments }) => (
             return (
               <ol className="comment-list list-none p-0 m-0">
                 {data.comments.nodes.map(comment => (
+                  <div className="comment-thread" key={comment.id}>
                   <Comment
                     key={comment.id}
                     commentId={comment.id}
                     date={comment.date}
                     authorName={comment.author.name}
                     authorUrl={comment.author.url}
+                    classes={''}
                   >
                     {comment.content}
                   </Comment>
+
+                  { comment.children.nodes && comment.children.nodes.map(reply => (
+
+                    <Comment
+                      key={reply.id}
+                      replyId={reply.id}
+                      date={reply.date}
+                      authorName={reply.author.name}
+                      authorUrl={reply.author.url}
+                      classes={'ml-6'}
+                    >
+                      {reply.content}
+                    </Comment>
+                  ))}
+                  
+                  </div>
                 ))}
               </ol>
             )
