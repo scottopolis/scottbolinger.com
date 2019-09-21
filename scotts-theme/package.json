@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "scotts-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby-theme-publisher": "*",
+    "classnames": "^2.2.6",
+    "gatsby": "^2.13.82",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}

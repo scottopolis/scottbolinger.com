@@ -1,0 +1,1 @@
+(https://github.com/staticfuse/gatsby-theme-publisher/)

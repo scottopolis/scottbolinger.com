@@ -1,0 +1,49 @@
+{
+  "name": "gatsby-theme-publisher",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Scott Bolinger",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scottopolis"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin"
+  ],
+  "devDependencies": {
+    "gatsby": "^2.13.82",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.82",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "dependencies": {
+    "@chakra-ui/core": "^0.2.3",
+    "@emotion/core": "^10.0.17",
+    "@emotion/styled": "^10.0.17",
+    "apollo-boost": "^0.4.4",
+    "apollo-link-context": "^1.0.19",
+    "emotion-theming": "^10.0.17",
+    "gatsby-image": "^2.2.20",
+    "gatsby-plugin-google-analytics": "^2.1.7",
+    "gatsby-plugin-mailchimp": "^5.1.2",
+    "gatsby-plugin-postcss": "^2.1.6",
+    "gatsby-plugin-sharp": "^2.2.25",
+    "gatsby-plugin-sitemap": "^2.2.6",
+    "gatsby-source-filesystem": "^2.1.9",
+    "gatsby-source-graphql": "^2.1.11",
+    "gatsby-transformer-sharp": "^2.2.16",
+    "graphql-tag": "^2.10.1",
+    "isomorphic-fetch": "^2.2.1",
+    "react-apollo": "^3.0.0",
+    "react-extras": "^0.9.0",
+    "react-headroom": "^2.2.8",
+    "react-helmet": "^5.2.0"
+  }
+}
