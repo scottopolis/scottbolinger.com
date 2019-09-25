@@ -67,7 +67,7 @@ export default class IndexPage extends React.Component {
 
                         <Box w={["100%", "25%"]} p={2}>
                             
-                            <Button display='block' width='100%' variantColor="primary" type="submit" value="Subscribe">Submit</Button>
+                            <Button display='block' width='100%' variantColor="blue" type="submit" value="Subscribe">Submit</Button>
 
                         </Box>
                         
