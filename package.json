@@ -1,15 +1,21 @@
 {
-  "name": "gatsby-publisher-theme-workspace",
   "private": true,
+  "name": "scottbolinger.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "start": "yarn workspace scotts-theme start",
-    "build": "yarn workspace scotts-theme build"
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "clean": "gatsby clean"
   },
-  "workspaces": [
-    "gatsby-theme-publisher",
-    "scotts-theme"
-  ],
   "dependencies": {
-    "gatsby-theme-publisher": "*"
+    "@staticfuse/gatsby-theme-publisher": "^0.10.4",
+    "gatsby": "^2.15.34",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   }
 }
